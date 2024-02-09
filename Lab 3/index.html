@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaheer's Grocery</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class = "headerclass">
+        <h1>Zaheer's Grocery</h1>
+    </header>
+    <div class="tab">
+
+            <button class="tablinks" onclick="openInfo(event, 'Home')">Home</button>
+            <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+            <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+        
+
+      </div>
+      
+
+
+      <div id = "Home" class="tabcontent">
+        <h3 class="homeheading">
+            Welcome to Zaheer's grocery
+        </h3>
+        <p class="phome">
+            Thank you for giving us a visit!
+            <br>
+            <br>
+            Above are a few of our weekly deals. This week, 
+            we have sales on organic salmon and lactose-free milk.
+            <br>
+            <br>
+            Check out our products page to begin your shopping.
+        </p>
+      </div>
+
+      <div id = "Products" class="tabcontent">
+        <div id="filters" class="filters">
+            <div id = "restrictions" class="restrictions">
+                <h4>Choose your dietary restrictions:</h4>
+                <div class="checks">
+                    <p>Gluten Free <input type="checkbox" id = "gf" onchange="populateListProductChoices('displayProduct')"></p>
+                    <p>Vegetarian <input type="checkbox" id = "vg" onchange="populateListProductChoices('displayProduct')"></p>
+                    <p>Organic <input type="checkbox" id="og" ></p>
+                </div>
+
+            </div>
+            <div id = 'search' class="searchbox">
+                <textarea name="search" id="textsearch" cols="30" rows="1" placeholder="search..."></textarea>
+                <button class="searchbutton" onchange="">Search</button>
+            </div>
+            
+        </div>
+        <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+            <option value=""></option>
+            <option value="Vegetarian" >Vegetarian</option>
+            <option value="GlutenFree">Gluten-Free</option>
+            <option value = "both">Vegetarian and Gluten-Free</option>
+            <option value="None">None</option>
+            </select>
+        <p>We preselected products based on your restrictions.</p>
+        Choose items to buy:
+        <div id="displayProduct"></div>
+        <button id="addCart" type="button" class="block" onclick="selectedItems()">
+            Add selected items to cart.
+        </button>
+        <p>test</p>
+      </div>
+
+      <div id = "Cart" class="tabcontent">
+        Test2
+        <div id="displayCart"></div>
+      </div>
+      <script src="scripts/main.js"></script>
+      <script>
+        openInfo(event, 'Home')
+      </script>
+       <script>
+        function getElements(){
+          populateListProductChoices('dietSelect', 'displayProduct', 'isorganic')
+        }
+      </script>
+
+      <script src="scripts/groceries.js"></script>
+</body>
+</html>
