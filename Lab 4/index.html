@@ -56,7 +56,7 @@
                     <a href="#booking" class="navtxt">Book with Us</a>
                 </li>
                 <li class="nav-item pr-3 pl-3 navii">
-                    <a href="" class="navtxt">Contact Us</a>
+                    <a href="#contact" class="navtxt">Contact Us</a>
                 </li>
             </ul>
         </nav>
@@ -165,53 +165,63 @@
     <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
     <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
     <!-- could work well.  You can use other patterns too.  This is just an example. -->
-    <div class="container">
+    <div class="container-md border-bottom mb-4">
         <h3 id = "booking">Book Your Appointment!</h3>
-        <div id="accordion">
-            <div class="card">
-                <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a Cut</a>
-                </div>
-                <div id="collapseService" class="collapse show" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Here is our list of services</p>
-                    </div>
-                </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
-                </div>
-                <div id="collapseDate" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>What date?</p>
-                        <!-- Bootstrap has various input components. Some examples are given here: -->
-                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
-                        <div class="form-group row">
-                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                            <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
-                </div>
-                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Your information so we can contact you</p>
-                        <p>Form to enter name, email, phone</p>
-                    </div>
-                </div>
-            </div>
+        <div class="bookingform mb-4">
+            <label>Choose your haircut type</label>
+            <select class="custom-select mr-sm-2">
+                <option selected>...</option>
+                <option value="1">Short hair cut</option>
+                <option value="2">Medium hair trim</option>
+                <option value="3">Short hair trim</option>
+                <option value="4">Custom cut</option>
+            </select>
         </div>
+        <div class="bookingform mb-4">
+            <label>Pick a date & time</label>
+            <div class="justify-content-between">
+                <input type="date">
+              <input type="time">
+            </div>
+            
+        </div>
+        <div class="bookingform mb-4">
+            <label>Please provide your full name</label>
+            <input type="text"class = "form-control" placeholder="John Smith">
+        </div>
+        <div class="bookingform mb-4">
+            <label>Enter your email</label>
+            <input type="email" class="form-control" placeholder="example@email.com">
+        </div>
+        <button class="btn btnclr mb-4">Submit your booking!</button>
+       
     </div>
 
 
-    <div class="container">
-        <h3>Contact Us</h3>
+    <div class="container mb-5">
+        
+        <div class="row">
+            <div class="col-6">
+                <h3 id = "contact">Contact Us</h3>
+                You can contact us by phone at (613) 594-2239,
+                or by email at ubercuts@gmail.com.
+                
+            </div>
+            <div class="col-6">
+                <h5>Location</h5>
+                You can find us at 3000 Carling Ave, 
+                <br>
+                Nepean ON 
+       
+                K2B 7K2
+
+                <br>
+                <br>
+                <h5>Hours</h5>
+                we're available 9:00-5:00 Monday - Friday! 
+                Give us a call or visit during those hours if you have any questions.
+            </div>
+        </div>
     </div>
 </body>
 </html>

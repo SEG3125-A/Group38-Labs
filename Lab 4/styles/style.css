@@ -44,3 +44,20 @@ h1 {
 .secondaryclr {
     background-color: rgb(233, 217, 240);
 }
+
+.btnclr {
+    background-color: rgb(110, 75, 198);
+    color: ivory;
+    transition-duration: 0.25s;
+}
+
+.btnclr:hover{ 
+    background-color: rgb(68, 45, 128);
+    color: ivory;
+
+}
+
+.btnclr:active, .btnclr:focus, .btnclr:active:focus{
+    background-color: rgb(47, 31, 87);
+    color:ivory;
+}
